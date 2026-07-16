@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Red Arch Knowledge Manager — Licensing</title>
+<meta name="description" content="Red Arch Knowledge Manager is published by Red Arch Labs and made available under license — the core software under the Apache License 2.0, with commercial and enterprise licensing available from Red Arch Labs." />
+<meta name="theme-color" content="#171210" />
+
+<meta property="og:title" content="Red Arch Knowledge Manager — Licensing" />
+<meta property="og:description" content="Red Arch Knowledge Manager — published by Red Arch Labs and licensed to everyone under the Apache License 2.0. Built-in REST API, import/export, and change management." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://redarchlabs.com/knowledge-manager/" />
+<meta property="og:image" content="https://redarchlabs.com/images/redarch-logo.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Red Arch Knowledge Manager — Licensing" />
+<meta name="twitter:description" content="Published by Red Arch Labs and licensed to everyone under the Apache License 2.0." />
+<meta name="twitter:image" content="https://redarchlabs.com/images/redarch-logo.png" />
+
+<link rel="icon" type="image/png" href="../images/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+  /* ============================================================
+     Red Arch Knowledge Manager — Licensing page
+     Self-contained. Serves as the trademark specimen for the
+     RED ARCH KNOWLEDGE MANAGER word mark,
+     International Class 045 (licensing of software in the
+     framework of software publishing).
+     ============================================================ */
+  :root {
+    --ink:#171210; --ink-2:#1d1613; --ink-3:#251c17; --ink-4:#2f2319; --paper:#fbf4ec;
+    --fg:#f6efe7; --muted:#c7b8a9; --muted-2:#9c8b7c;
+    --line:rgba(246,239,231,0.12); --line-2:rgba(246,239,231,0.07);
+    --red:#e01f22; --red-deep:#b3161a; --rust:#c2410c; --ember:#f57c00;
+    --arch:linear-gradient(135deg,var(--ember) 0%,var(--red) 52%,var(--rust) 100%);
+    --arch-soft:linear-gradient(135deg,rgba(245,124,0,0.16),rgba(224,31,34,0.10));
+    --maxw:1160px; --pad:clamp(20px,5vw,56px); --radius:16px;
+    --font:'Archivo',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--ink); color:var(--fg); font-family:var(--font); font-weight:400; line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; overflow-x:hidden; }
+  a { color:inherit; text-decoration:none; }
+  img { max-width:100%; display:block; }
+  ::selection { background:var(--red); color:#fff; }
+  :focus-visible { outline:2px solid var(--ember); outline-offset:3px; border-radius:4px; }
+  .wrap { width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad); }
+  .eyebrow { font-size:0.75rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--ember); margin:0 0 14px; display:inline-flex; align-items:center; gap:10px; }
+  .eyebrow::before { content:""; width:26px; height:2px; background:var(--arch); border-radius:2px; }
+  h1,h2,h3 { text-wrap:balance; margin:0; line-height:1.05; letter-spacing:-0.02em; }
+  .accent { color:var(--red); }
+  .tm { font-size:0.34em; font-weight:700; vertical-align:super; color:var(--ember); margin-left:0.1em; letter-spacing:0; }
+
+  /* Buttons */
+  .btn { display:inline-flex; align-items:center; gap:10px; font-family:var(--font); font-size:1rem; font-weight:700; padding:15px 26px; border-radius:999px; border:1px solid transparent; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease; white-space:nowrap; }
+  .btn-primary { background:var(--red); color:#fff; box-shadow:0 10px 30px -8px rgba(224,31,34,0.55); }
+  .btn-primary:hover { transform:translateY(-2px); box-shadow:0 16px 40px -8px rgba(224,31,34,0.7); background:#ec2a2d; }
+  .btn-ghost { background:transparent; color:var(--fg); border-color:var(--line); }
+  .btn-ghost:hover { border-color:var(--ember); transform:translateY(-2px); }
+  .btn-lg { padding:18px 34px; font-size:1.08rem; }
+  .btn .gh { width:20px; height:20px; flex:none; }
+  .btn .arrow { transition:transform .18s ease; }
+  .btn:hover .arrow { transform:translateX(3px); }
+
+  /* Header */
+  header { position:sticky; top:0; z-index:50; background:rgba(20,15,13,0.82); backdrop-filter:saturate(160%) blur(12px); border-bottom:1px solid var(--line); }
+  .nav { display:flex; align-items:center; justify-content:space-between; height:74px; gap:24px; }
+  .brand { display:inline-flex; align-items:center; gap:12px; font-weight:800; letter-spacing:-0.01em; }
+  .brand .mark { width:36px; height:36px; flex:none; display:inline-block; border-radius:8px; background:#fbf4ec url("../images/redarch-mark.png") center/cover no-repeat; box-shadow:inset 0 0 0 1px rgba(0,0,0,0.06); }
+  .brand .name { font-size:1.08rem; }
+  .brand .name small { display:block; font-size:0.62rem; font-weight:600; letter-spacing:0.16em; color:var(--muted-2); text-transform:uppercase; margin-top:1px; }
+  .nav-links { display:flex; align-items:center; gap:30px; }
+  .nav-links a { color:var(--muted); font-weight:600; font-size:0.95rem; transition:color .15s ease; }
+  .nav-links a:hover, .nav-links a[aria-current="page"] { color:var(--fg); }
+  .nav-cta { display:flex; align-items:center; gap:14px; }
+  @media (max-width:900px) { .nav-links { display:none; } }
+
+  /* Hero (specimen core) */
+  .hero { position:relative; padding:clamp(52px,9vh,110px) 0 clamp(36px,6vh,64px); overflow:hidden; }
+  .hero::before { content:""; position:absolute; z-index:0; pointer-events:none; width:70vw; height:70vw; max-width:820px; max-height:820px; right:-14vw; top:-22vw; background:radial-gradient(circle,rgba(224,31,34,0.16),transparent 62%); }
+  .hero .wrap { position:relative; z-index:1; }
+  .badge { display:inline-flex; align-items:center; gap:9px; padding:7px 14px; border-radius:999px; background:var(--ink-3); border:1px solid rgba(245,124,0,0.35); font-size:0.78rem; font-weight:700; color:var(--fg); margin-bottom:20px; }
+  .badge .sep { width:1px; height:14px; background:var(--line); }
+  .badge .lic { color:var(--muted); font-weight:600; }
+  .hero h1 { font-size:clamp(2.4rem,5.6vw,4.2rem); font-weight:900; letter-spacing:-0.035em; max-width:16ch; }
+  .hero .tagline { font-size:clamp(1.2rem,2.4vw,1.85rem); font-weight:800; line-height:1.14; letter-spacing:-0.02em; color:var(--fg); margin:16px 0 0; }
+  .hero .lede { color:var(--muted); font-size:clamp(1.02rem,1.6vw,1.2rem); max-width:60ch; margin:18px 0 0; }
+
+  /* Licensing */
+  .section { padding:clamp(40px,7vh,84px) 0; position:relative; }
+  .hero-cta { display:flex; flex-wrap:wrap; gap:14px; margin-top:26px; }
+  .lic-kicker { font-size:0.72rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--ember); margin-bottom:12px; }
+  .lic-panel { background:var(--ink-2); border:1px solid var(--line); border-radius:22px; padding:clamp(28px,4vw,44px); }
+  .lic-panel h2 { font-size:clamp(1.6rem,3.2vw,2.4rem); font-weight:800; margin-bottom:14px; }
+  .lic-panel > p { color:var(--muted); font-size:1.06rem; margin:0; max-width:62ch; }
+  .freedoms { list-style:none; padding:0; margin:22px 0 0; display:grid; grid-template-columns:1fr 1fr; gap:12px 26px; }
+  @media (max-width:640px) { .freedoms { grid-template-columns:1fr; } }
+  .freedoms li { display:flex; align-items:flex-start; gap:11px; font-weight:500; }
+  .freedoms .check { flex:none; width:22px; height:22px; border-radius:50%; background:var(--arch-soft); border:1px solid rgba(245,124,0,0.4); display:grid; place-items:center; margin-top:2px; }
+  .freedoms .check svg { width:12px; height:12px; color:var(--ember); }
+  .section-head { max-width:760px; margin:clamp(40px,7vh,72px) 0 clamp(24px,4vh,36px); }
+  .section-head h2 { font-size:clamp(1.7rem,3.4vw,2.5rem); font-weight:800; }
+  .section-head p { color:var(--muted); font-size:clamp(1.02rem,1.5vw,1.15rem); margin:14px 0 0; max-width:64ch; }
+  .feat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px; }
+  .feat { background:var(--ink-3); border:1px solid var(--line); border-radius:var(--radius); padding:26px 24px 28px; transition:transform .2s ease, border-color .2s ease, background .2s ease; position:relative; overflow:hidden; }
+  .feat::after { content:""; position:absolute; left:0; top:0; height:3px; width:100%; background:var(--arch); transform:scaleX(0); transform-origin:left; transition:transform .25s ease; }
+  .feat:hover { transform:translateY(-4px); border-color:rgba(245,124,0,0.4); background:var(--ink-4); }
+  .feat:hover::after { transform:scaleX(1); }
+  .feat .ic { width:36px; height:36px; color:var(--ember); margin-bottom:14px; }
+  .feat h3 { font-size:1.1rem; font-weight:800; margin-bottom:8px; }
+  .feat p { color:var(--muted); font-size:0.94rem; margin:0; }
+  .feat code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:0.85em; background:var(--ink-4); border:1px solid var(--line); border-radius:6px; padding:1px 6px; color:var(--fg); }
+  .lic-note { margin-top:26px; color:var(--muted-2); font-size:0.9rem; max-width:70ch; }
+
+  /* Footer */
+  footer { border-top:1px solid var(--line); padding:clamp(44px,6vh,72px) 0 40px; margin-top:clamp(40px,7vh,80px); }
+  .foot-grid { display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:36px; }
+  @media (max-width:720px) { .foot-grid { grid-template-columns:1fr 1fr; gap:30px; } }
+  @media (max-width:460px) { .foot-grid { grid-template-columns:1fr; } }
+  .foot-brand p { color:var(--muted); font-size:0.95rem; max-width:38ch; margin:16px 0 0; }
+  .foot-contact { font-weight:600; }
+  .foot-contact a { color:var(--ember); }
+  .foot-col h4 { font-size:0.75rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted-2); font-weight:700; margin:0 0 16px; }
+  .foot-col a { display:flex; align-items:center; gap:8px; color:var(--muted); font-size:0.95rem; font-weight:500; padding:5px 0; transition:color .15s ease; }
+  .foot-col a:hover { color:var(--ember); }
+  .foot-bottom { margin-top:44px; padding-top:24px; border-top:1px solid var(--line-2); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; color:var(--muted-2); font-size:0.85rem; }
+  .trademark { margin:16px 0 0; color:var(--muted-2); font-size:0.8rem; line-height:1.5; max-width:88ch; }
+</style>
+</head>
+<body>
+
+<!-- =================== HEADER =================== -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="../" aria-label="Red Arch Labs home">
+      <span class="mark" role="img" aria-label="Red Arch Labs logo"></span>
+      <span class="name">Red Arch<small>Knowledge Manager</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../">Home</a>
+      <a href="./" aria-current="page">Knowledge Manager</a>
+      <a href="../services/">Services</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://github.com/redarchlabs/red-arch-km" target="_blank" rel="noopener">Get it</a>
+    </div>
+  </div>
+</header>
+
+<!-- =================== HERO (specimen) =================== -->
+<section class="hero">
+  <div class="wrap">
+    <span class="badge">Open source <span class="sep"></span> <span class="lic">Apache-2.0</span></span>
+    <span class="eyebrow">Licensing of software</span>
+    <h1>Red Arch <span class="accent">Knowledge Manager</span><sup class="tm">™</sup></h1>
+    <p class="tagline">Published and licensed by Red Arch Labs.</p>
+    <p class="lede">Red Arch Knowledge Manager is software published by Red Arch Labs and made available to everyone under license — the Apache License 2.0. Obtain it, self-host it, modify it, and redistribute it under the terms of that license.</p>
+  </div>
+</section>
+
+<!-- =================== LICENSING =================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="lic-panel">
+      <div class="lic-kicker">Open-source license</div>
+      <h2>Licensed under the Apache License 2.0</h2>
+      <p>Red Arch Knowledge Manager is published by Red Arch Labs and licensed to everyone under the Apache License 2.0. That license grants you the right to:</p>
+      <ul class="freedoms">
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Use the software for any purpose, including commercially</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Study and modify the source code</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Redistribute it and your modifications</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> A patent grant from the contributors</li>
+      </ul>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="https://github.com/redarchlabs/red-arch-km" target="_blank" rel="noopener">
+          <svg class="gh" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.05-.02-2.06-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.81 5.65-5.49 5.95.43.37.82 1.1.82 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.22.7.83.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg>
+          Get it on GitHub <span class="arrow">→</span>
+        </a>
+        <a class="btn btn-ghost btn-lg" href="https://github.com/redarchlabs/red-arch-km/blob/main/LICENSE" target="_blank" rel="noopener">Read the license</a>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2>What you're licensing</h2>
+      <p>Red Arch Knowledge Manager is a complete, self-hostable platform — open source under Apache 2.0, and built to integrate and move with your organization.</p>
+    </div>
+    <div class="feat-grid">
+      <article class="feat">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <h3>Built-in REST API</h3>
+        <p>A versioned REST API at <code>/api/v1</code> with org-scoped API keys, scopes, and rate limiting — automate records, reports, workflows, search, and knowledge from anything.</p>
+      </article>
+      <article class="feat">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <h3>Import &amp; export</h3>
+        <p>Move an entire org as a portable JSON bundle — entities, forms, views, workflows, records, and documents — to back up, clone, or migrate between installs.</p>
+      </article>
+      <article class="feat">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+        <h3>Change management</h3>
+        <p>Promote configuration across dev, staging, and production with lineage-aware diffs and controlled releases — ship changes safely between environments.</p>
+      </article>
+      <article class="feat">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <h3>Role-based security</h3>
+        <p>Fine-grained, per-role access to every document, record, and view — so each person sees exactly what they should and nothing they shouldn't.</p>
+      </article>
+      <article class="feat">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <h3>AI chat over your knowledge</h3>
+        <p>Ask questions and get answers grounded in your own content, with passage-level citations back to the source document.</p>
+      </article>
+      <article class="feat">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <h3>Self-hostable</h3>
+        <p>Run it on your own infrastructure and own your data end to end. No lock-in — it's yours under Apache 2.0.</p>
+      </article>
+    </div>
+    <p class="lic-note">Red Arch Knowledge Manager is developed, published, and licensed by Red Arch Labs LLC. Questions? Email <a href="mailto:jeremy@redarchlabs.com" style="color:var(--ember)">jeremy@redarchlabs.com</a>.</p>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../" aria-label="Red Arch Labs home">
+          <span class="mark" role="img" aria-label="Red Arch Labs logo"></span>
+          <span class="name">Red Arch<small>Knowledge Manager</small></span>
+        </a>
+        <p>Red Arch Knowledge Manager is published and licensed by Red Arch Labs LLC.</p>
+        <p class="foot-contact">Contact: <a href="mailto:jeremy@redarchlabs.com">jeremy@redarchlabs.com</a></p>
+      </div>
+      <div class="foot-col">
+        <h4>Licensing</h4>
+        <a href="./">Apache 2.0 (open source)</a>
+        <a href="https://github.com/redarchlabs/red-arch-km/blob/main/LICENSE" target="_blank" rel="noopener">Read the license</a>
+        <a href="https://github.com/redarchlabs/red-arch-km" target="_blank" rel="noopener">Get it on GitHub</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="../">Home</a>
+        <a href="../services/">Services</a>
+        <a href="mailto:jeremy@redarchlabs.com">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Red Arch Labs LLC · American Fork, Utah · redarchlabs.com</span>
+      <span>Licensing of software · Apache-2.0</span>
+    </div>
+    <p class="trademark">“Red Arch Knowledge Manager” and the Red Arch Labs logo are trademarks of Red Arch Labs LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

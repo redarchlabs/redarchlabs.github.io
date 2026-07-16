@@ -14,4 +14,4 @@ custom domain [redarchlabs.com](https://redarchlabs.com).
 Edit `index.html` directly and push to `main` — Pages redeploys automatically.
 To swap a gallery screenshot, replace the matching file in `images/`.
 
-The product it markets is open source: https://github.com/redarchlabs/red-arch-km-2
+The product it markets is open source: https://github.com/redarchlabs/red-arch-km

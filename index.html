@@ -335,6 +335,8 @@
   .cta-panel .btn-primary:hover { background: #fff; transform: translateY(-2px); }
   .cta-panel .btn-ghost { color: #fff; border-color: rgba(255,255,255,0.5); }
   .cta-panel .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+  .cta-panel .cta-contact { position: relative; margin: 24px 0 0; color: rgba(255,255,255,0.92); font-weight: 600; font-size: 1rem; }
+  .cta-panel .cta-contact a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
 
   /* ---------- Footer ---------- */
   footer { border-top: 1px solid var(--line); padding: clamp(48px, 7vh, 80px) 0 40px; }
@@ -342,6 +344,9 @@
   @media (max-width: 720px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 30px; } }
   @media (max-width: 460px) { .foot-grid { grid-template-columns: 1fr; } }
   .foot-brand p { color: var(--muted); font-size: 0.95rem; max-width: 34ch; margin: 16px 0 0; }
+  .foot-contact { margin: 14px 0 0; font-size: 0.95rem; color: var(--muted); font-weight: 600; }
+  .foot-contact a { color: var(--ember); text-decoration: none; }
+  .foot-contact a:hover { text-decoration: underline; }
   .foot-col h4 { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-2); font-weight: 700; margin: 0 0 16px; }
   .foot-col a { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 0.95rem; font-weight: 500; padding: 5px 0; transition: color .15s ease; }
   .foot-col a:hover { color: var(--ember); }
@@ -408,6 +413,7 @@
     <nav class="nav-links" aria-label="Primary">
       <a href="#usecases">Use cases</a>
       <a href="#capabilities">Capabilities</a>
+      <a href="#mcp">Build with AI</a>
       <a href="#showcase">Demos</a>
       <a href="#security">Security</a>
       <a href="#opensource">Open source</a>
@@ -707,6 +713,41 @@
   </div>
 </section>
 
+<!-- =================== MCP · BUILD WITH AI =================== -->
+<section class="section divider-top" id="mcp">
+  <div class="wrap">
+    <div class="feature">
+      <div class="feature-copy reveal">
+        <p class="eyebrow">Build with AI · MCP</p>
+        <h3>Just tell your AI assistant what to build.</h3>
+        <p class="copy">Red Arch ships a <strong>Model Context Protocol (MCP) server</strong>. Point Claude, Cursor, or your favorite coding LLM at it, describe what you need in plain language, and it builds your entities, forms, views, reports, and workflows for you — right inside your org, respecting your permissions.</p>
+        <ul class="flist">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>An MCP server for your favorite coding LLM — Claude, Cursor &amp; more</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Generate entities, forms, views, reports &amp; workflows from a prompt</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Permission-aware — the assistant only touches what you're allowed to</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Iterate by conversation instead of clicking through builders</li>
+        </ul>
+      </div>
+      <div class="feature-media reveal">
+        <div class="mock">
+          <div class="mock-bar"><i></i><i></i><i></i><span class="lbl">MCP · your AI assistant</span></div>
+          <div class="bubble q">Add a “hires vs terminations by quarter” report, and a workflow that emails HR whenever a new hire is added.</div>
+          <div class="bubble a"><strong>Done.</strong> Built the <em>Headcount Flow</em> line-chart report and published the <em>New Hire → Notify HR</em> workflow in your org.
+            <div class="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>2 tools called · create_report · publish_workflow</div>
+          </div>
+          <div class="flow-tags">
+            <span class="tag">create_entity</span>
+            <span class="tag">create_form</span>
+            <span class="tag">create_view</span>
+            <span class="tag">create_report</span>
+            <span class="tag">create_workflow</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- =================== SHOWCASE (real screenshots) =================== -->
 <!-- Drop real PNG/JPG screenshots into an images/ folder next to this file.
      Each <img> auto-appears once its file exists; until then a branded
@@ -932,6 +973,7 @@
         </a>
         <a class="btn btn-ghost btn-lg" href="#usecases">Explore the platform</a>
       </div>
+      <p class="cta-contact">Questions? Email <a href="mailto:jeremy@redarchlabs.com">jeremy@redarchlabs.com</a></p>
     </div>
   </div>
 </section>
@@ -946,6 +988,7 @@
           <span class="name">Red Arch<small>Knowledge Manager</small></span>
         </a>
         <p>The open-source platform that puts role-based security around everything your organization knows.</p>
+        <p class="foot-contact">Contact: <a href="mailto:jeremy@redarchlabs.com">jeremy@redarchlabs.com</a></p>
       </div>
       <div class="foot-col">
         <h4>Platform</h4>

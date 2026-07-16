@@ -389,6 +389,33 @@
   figcaption { margin-top: 15px; font-weight: 700; font-size: 0.96rem; color: var(--fg); }
   figcaption span { display: block; color: var(--muted); font-weight: 400; font-size: 0.87rem; margin-top: 3px; }
 
+  /* ---------- Tech stack + architecture ---------- */
+  .arch { max-width: 960px; margin: 0 auto clamp(44px, 7vh, 76px); }
+  .arch-tier { display: grid; gap: 14px; }
+  .arch-3 { grid-template-columns: repeat(3, 1fr); }
+  .arch-6 { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 760px) { .arch-3 { grid-template-columns: 1fr; } .arch-6 { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 440px) { .arch-6 { grid-template-columns: 1fr; } }
+
+  .anode { background: var(--ink-3); border: 1px solid var(--line); border-radius: 14px; padding: 15px 14px; text-align: center; transition: border-color .2s ease, transform .2s ease, background .2s ease; }
+  .anode:hover { border-color: rgba(245,124,0,0.4); transform: translateY(-3px); background: var(--ink-4); }
+  .anode .ai { width: 26px; height: 26px; color: var(--ember); margin: 0 auto 9px; display: block; }
+  .anode b { display: block; font-size: 0.98rem; font-weight: 800; letter-spacing: -0.01em; }
+  .anode span { display: block; color: var(--muted); font-size: 0.8rem; margin-top: 4px; }
+
+  .arch-band { background: var(--arch-soft); border: 1px solid rgba(245,124,0,0.35); border-radius: 18px; padding: 16px; }
+  .arch-band .band-label { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ember); text-align: center; margin-bottom: 13px; }
+
+  .arch-conn { height: 26px; display: flex; align-items: center; justify-content: center; }
+  .arch-conn::before { content: ""; width: 2px; height: 100%; background: var(--arch); border-radius: 2px; }
+
+  .stackgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .stackcol { background: var(--ink-3); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 22px; }
+  .stackcol h4 { font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ember); margin: 0 0 16px; font-weight: 800; }
+  .stackcol ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .stackcol li b { font-weight: 800; font-size: 0.94rem; }
+  .stackcol li span { color: var(--muted); font-size: 0.87rem; display: block; margin-top: 2px; }
+
   /* ---------- Scroll reveal ---------- */
   .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
   .reveal.in { opacity: 1; transform: none; }
@@ -980,6 +1007,127 @@
       <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Per-document permissions</span>
       <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>Multi-tenant isolation</span>
       <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Audit-ready activity</span>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TECH STACK / ARCHITECTURE =================== -->
+<section class="section divider-top" id="stack">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center;">Under the hood</p>
+      <h2>Built on a modern, open stack.</h2>
+      <p>No black boxes. Red Arch runs on proven open-source infrastructure you can self-host — a knowledge graph, a vector store, a Postgres database, and an LLM, all wired together behind one API.</p>
+    </div>
+
+    <!-- Architecture diagram -->
+    <div class="arch reveal" role="img" aria-label="Red Arch architecture: clients connect through the core services to the data and AI layer.">
+      <div class="arch-tier arch-3">
+        <div class="anode">
+          <svg class="ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <b>Web app</b><span>Next.js &amp; React UI</span>
+        </div>
+        <div class="anode">
+          <svg class="ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="16" height="12" rx="2.5"/><path d="M12 8V4.6"/><circle cx="12" cy="3.4" r="1.3"/><circle cx="9" cy="14" r="1.1"/><circle cx="15" cy="14" r="1.1"/><path d="M9.5 17.5h5"/></svg>
+          <b>AI agents</b><span>Assistants via MCP</span>
+        </div>
+        <div class="anode">
+          <svg class="ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <b>Your systems</b><span>REST API &amp; webhooks</span>
+        </div>
+      </div>
+
+      <div class="arch-conn"></div>
+
+      <div class="arch-band">
+        <div class="band-label">Red Arch core · role-based access on every request</div>
+        <div class="arch-tier arch-3">
+          <div class="anode">
+            <svg class="ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <b>API &amp; auth</b><span>FastAPI · Clerk</span>
+          </div>
+          <div class="anode">
+            <svg class="ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/><path d="M9 6h5a2 2 0 0 1 2 2v7"/></svg>
+            <b>Workflow engine</b><span>Celery · BPMN</span>
+          </div>
+          <div class="anode">
+            <svg class="ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 2a2.5 2.5 0 0 0-2.45 3A2.5 2.5 0 0 0 5 9.5v5A2.5 2.5 0 0 0 7.05 19 2.5 2.5 0 0 0 12 19V4.5A2.5 2.5 0 0 0 9.5 2z"/><path d="M14.5 2a2.5 2.5 0 0 1 2.45 3A2.5 2.5 0 0 1 19 9.5v5A2.5 2.5 0 0 1 16.95 19 2.5 2.5 0 0 1 12 19"/></svg>
+            <b>AI brain</b><span>RAG pipeline</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-conn"></div>
+
+      <div class="arch-tier arch-6">
+        <div class="anode">
+          <svg class="ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>
+          <b>PostgreSQL</b><span>Records + row-level security</span>
+        </div>
+        <div class="anode">
+          <svg class="ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+          <b>Qdrant</b><span>Vector store · semantic search</span>
+        </div>
+        <div class="anode">
+          <svg class="ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2.4"/><circle cx="19" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M6.7 7.6 10.4 16M17.3 7.6 13.6 16M7 6h10"/></svg>
+          <b>Neo4j</b><span>Knowledge graph · facts</span>
+        </div>
+        <div class="anode">
+          <svg class="ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v6H4zM4 14h16v6H4z"/><path d="M8 7h.01M8 17h.01"/></svg>
+          <b>Redis</b><span>Cache &amp; job queue</span>
+        </div>
+        <div class="anode">
+          <svg class="ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          <b>Object storage</b><span>Documents &amp; files (S3)</span>
+        </div>
+        <div class="anode">
+          <svg class="ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
+          <b>OpenAI</b><span>LLM · chat, grading, generation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stack list -->
+    <div class="stackgrid">
+      <div class="stackcol reveal">
+        <h4>Frontend</h4>
+        <ul>
+          <li><b>Next.js &amp; React</b><span>The web app — pages, builders, and dashboards</span></li>
+          <li><b>TypeScript</b><span>A type-safe, maintainable codebase</span></li>
+          <li><b>Tailwind CSS</b><span>The consistent design system and styling</span></li>
+          <li><b>React Flow</b><span>The visual, no-code BPMN workflow canvas</span></li>
+          <li><b>TipTap &amp; CodeMirror</b><span>Rich-text and Markdown document editing</span></li>
+        </ul>
+      </div>
+      <div class="stackcol reveal">
+        <h4>Backend</h4>
+        <ul>
+          <li><b>Python &amp; FastAPI</b><span>The REST API and AI services</span></li>
+          <li><b>Celery</b><span>Background jobs and the scheduled workflow engine</span></li>
+          <li><b>Clerk</b><span>Authentication, SSO, and organization management</span></li>
+          <li><b>Pydantic &amp; Zod</b><span>End-to-end validation at every boundary</span></li>
+          <li><b>MCP server</b><span>Lets AI assistants build and operate your org</span></li>
+        </ul>
+      </div>
+      <div class="stackcol reveal">
+        <h4>Data &amp; AI</h4>
+        <ul>
+          <li><b>PostgreSQL</b><span>The relational database, with row-level multi-tenant isolation</span></li>
+          <li><b>Qdrant</b><span>The vector store powering semantic search</span></li>
+          <li><b>Neo4j</b><span>The knowledge graph and fact store</span></li>
+          <li><b>OpenAI models</b><span>The LLM behind chat, grading, and generation</span></li>
+          <li><b>Object storage (S3)</b><span>Where documents and files live</span></li>
+        </ul>
+      </div>
+      <div class="stackcol reveal">
+        <h4>Infrastructure</h4>
+        <ul>
+          <li><b>Docker &amp; Compose</b><span>Containerized — self-host the whole stack anywhere</span></li>
+          <li><b>Redis</b><span>Caching, rate limiting, and the job broker</span></li>
+          <li><b>Container registry</b><span>Versioned, pinned images for every release</span></li>
+          <li><b>Apache-2.0</b><span>Fully open source — inspect, fork, and extend it</span></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
